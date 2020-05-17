@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(function () {
     chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
         chrome.declarativeContent.onPageChanged.addRules([{
             conditions: [new chrome.declarativeContent.PageStateMatcher({
-                pageUrl: { hostEquals: 'eshet-tours.atlassian.net' },
+                pageUrl: { hostSuffix: 'atlassian.net' },
             })],
             actions: [new chrome.declarativeContent.ShowPageAction()]
         }]);
